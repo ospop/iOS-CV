@@ -1,0 +1,131 @@
+.identity-skills {
+  display: flex;
+  justify-content: space-between;
+}
+
+.card--identity {
+  margin-right: 2rem;
+}
+
+.card__heading {
+  padding: 0;
+  position: relative;
+  display: flex;
+  align-items: center;
+  img {
+    width: 30px;
+    margin-right: 1rem;
+  }
+  h2 {
+    font-size: 30px;
+    margin-top: 0.5rem;
+  }
+}
+
+.card__name {
+  margin-top: 1rem;
+  display: flex;
+  align-items: center;
+  h1 {
+    color: $grayFont;
+    font-size: 40px;
+    font-weight: 500;
+  }
+
+  button {
+    margin: 0 2rem;
+    background-color: #dcdcdc;
+    outline: none;
+    border: none;
+    border-radius: 20px;
+    width: 6rem;
+    height: 2rem;
+    color: #2b80ff;
+    font-size: 16px;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 2rem;
+    cursor: pointer;
+    &:hover {
+      background-color: #e9e9e9;
+    }
+    &:active {
+      background-color: #cacaca;
+    }
+  }
+}
+
+.card__job {
+  margin-top: 0.5rem;
+  margin-bottom: 1rem;
+  h3 {
+    font-weight: 300;
+    font-size: 25px;
+    color: #beb2a5;
+  }
+}
+
+.card__info {
+  display: flex;
+  flex-direction: column;
+  p {
+    margin: 0.8rem 0;
+    color: $grayFont;
+  }
+  .info__email {
+    &::before {
+      align-items: center;
+      background-image: url('/images/email.icon.png');
+      background-size: 25px;
+      background-repeat: no-repeat;
+      display: inline-block;
+      vertical-align: middle;
+      width: 35px;
+      height: 22px;
+      content: '';
+    }
+  }
+  .info__phone {
+    &::before {
+      align-items: center;
+      background-image: url('/images/phone.png');
+      background-size: 20px;
+      background-repeat: no-repeat;
+      display: inline-block;
+      margin: auto;
+      vertical-align: middle;
+      width: 35px;
+      height: 25px;
+      content: '';
+    }
+  }
+  .info__birthday {
+    &::before {
+      align-items: center;
+      background-image: url('/images/Cake.png');
+      background-size: 25px;
+      background-repeat: no-repeat;
+      display: inline-block;
+      vertical-align: middle;
+      width: 35px;
+      height: 35px;
+      content: '';
+    }
+  }
+}
+
+.card--skills {
+  margin-left: 2rem;
+}
+
+.card__skills_list {
+  background-color: green;
+  h2 {
+    font-size: 35px;
+    margin: 1.3rem 0;
+  }
+}
+
+.card__skills_item {
+  display: flex;
+}
