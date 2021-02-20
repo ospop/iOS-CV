@@ -1,0 +1,177 @@
+@import 'global';
+
+main {
+  margin: 0 auto;
+  width: 90%;
+}
+
+.status-bar {
+  padding-top: 5px;
+  height: 25px;
+  width: 100%;
+  p {
+    text-align: center;
+  }
+}
+
+header {
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding: 1rem;
+  h1 {
+    font-size: 50px;
+    margin: 1rem 0;
+    letter-spacing: -2px;
+  }
+  h3 {
+    color: #9d9d9d;
+    margin: 1rem 0;
+  }
+}
+
+#profile-image {
+  position: absolute;
+  right: 1rem;
+  border-radius: 50%;
+  width: 120px;
+}
+
+.identity-skills {
+  display: flex;
+  justify-content: space-between;
+}
+
+.card {
+  flex: 1;
+  position: relative;
+  padding: 1rem;
+  border-radius: 0.7rem;
+  background-color: #fff;
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+  h2 {
+    color: #b8b9b8;
+  }
+}
+
+.small--card {
+  min-height: 25rem;
+  width: 30rem;
+}
+
+.big--card {
+  width: 100%;
+  min-height: 5rem;
+  &:after {
+    content: '';
+    position: absolute;
+    border-radius: 50%;
+    right: 1rem;
+    top: 1rem;
+    width: 15px;
+    height: 15px;
+    background-color: blue;
+  }
+}
+.card--identity {
+  margin-right: 1rem;
+}
+
+.card__heading {
+  padding: 0;
+  position: relative;
+  //   background-color: rgba(255, 0, 0, 0.11);
+  display: flex;
+  align-items: center;
+  img {
+    width: 30px;
+    margin-right: 1.5rem;
+  }
+  h2 {
+    font-size: 40px;
+    margin-top: 0.5rem;
+  }
+}
+
+.card__name {
+  display: flex;
+  align-items: center;
+  h1 {
+    color: #4c4c4c;
+    font-size: 50px;
+  }
+
+  button {
+    margin: 0 2rem;
+    background-color: #dcdcdc;
+    outline: none;
+    border: none;
+    border-radius: 20px;
+    width: 5rem;
+    height: 2rem;
+    color: #2b80ff;
+    font-size: 20px;
+    cursor: pointer;
+    &:active {
+      background-color: #cacaca;
+    }
+  }
+}
+
+.card__job {
+  h3 {
+    color: #beb2a5;
+  }
+}
+
+.card__info {
+  display: flex;
+  flex-direction: column;
+  p {
+    margin: 0.5rem 0;
+  }
+  .info__email {
+    &::before {
+      align-items: center;
+      background-image: url('/images/email.icon.png');
+      background-size: 25px;
+      background-repeat: no-repeat;
+      display: inline-block;
+      vertical-align: middle;
+      width: 35px;
+      height: 25px;
+      content: '';
+    }
+  }
+  .info__phone {
+    &::before {
+      align-items: center;
+      background-image: url('/images/phone.png');
+      background-size: 20px;
+      background-repeat: no-repeat;
+      display: inline-block;
+      margin: auto;
+      vertical-align: middle;
+      width: 35px;
+      height: 25px;
+      content: '';
+    }
+  }
+  .info__birthday {
+    &::before {
+      align-items: center;
+      background-image: url('/images/Cake.png');
+      background-size: 25px;
+      background-repeat: no-repeat;
+      display: inline-block;
+      vertical-align: middle;
+      width: 35px;
+      height: 35px;
+      content: '';
+    }
+  }
+}
+
+.card--skills {
+  margin-left: 1.5rem;
+}
