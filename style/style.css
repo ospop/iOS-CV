@@ -1,12 +1,133 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
 * {
   padding: 0;
   margin: 0;
   font-family: "Meera Inimai", sans-serif;
+  box-sizing: border-box;
+}
+
+main {
+  margin: 0 auto;
+  width: 70%;
 }
 
 p {
   font-size: 20px;
+}
+
+.undercover-hr {
+  margin: 1.5rem auto;
+  height: 2px;
+  border-radius: 1px;
+  background-color: #4c4c4c;
+  opacity: 0.2;
+  width: 95%;
+  justify-content: center;
+}
+
+.dots--button {
+  position: absolute;
+  border-radius: 50%;
+  right: 0;
+  width: 20px;
+  height: 20px;
+  background-color: #2c80fe;
+}
+.dots--button:hover {
+  cursor: pointer;
+}
+.dots--button:before {
+  content: "...";
+  color: white;
+  font-size: 15px;
+  position: absolute;
+  right: 0;
+  top: 0;
+  transform: translate(-50%, -50%);
+}
+
+.card__traits {
+  min-height: 2rem;
+}
+.card__traits ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  height: 100px;
+}
+.card__traits li {
+  position: relative;
+  color: #4c4c4c;
+  margin: 0.5rem 1.2rem;
+  font-size: 25px;
+}
+.card__traits li::before {
+  content: "";
+  align-items: center;
+  width: 8px;
+  height: 8px;
+  background: #b9b9b9;
+  border-radius: 50%;
+  position: absolute;
+  left: -1.5rem;
+  top: 50%;
+  transform: translate(0, -50%);
+}
+
+.card--education h2 {
+  font-weight: 500;
+  font-size: 35px;
+  color: #4c4c4c;
+}
+.card--education h3 {
+  color: #b9b9b9;
+  font-weight: 300;
+  font-size: 30px;
+}
+.card--education h4 {
+  font-style: italic;
+  line-height: 55px;
+  font-weight: 500;
+  font-size: 30px;
+  color: #b9b9b9;
+}
+.card--education span {
+  color: #beafa0;
+}
+
+.card--experience h2 {
+  margin-bottom: 2rem;
+  font-weight: 500;
+  font-size: 35px;
+  color: #4c4c4c;
+}
+.card--experience p {
+  font-weight: 200;
+  font-size: 26px;
+  margin-bottom: 1.5rem;
+}
+
+.show--less--btn {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  width: 100px;
+  height: 50px;
+  border-radius: 20px;
+}
+.show--less--btn img {
+  width: 20px;
+  margin-bottom: 0.5rem;
+}
+.show--less--btn h3 {
+  color: #b9b9b9;
+  font-size: 18px;
+}
+.show--less--btn:hover {
+  cursor: pointer;
 }
 
 .identity-skills {
@@ -16,21 +137,6 @@ p {
 
 .card--identity {
   margin-right: 2rem;
-}
-
-.card__heading {
-  padding: 0;
-  position: relative;
-  display: flex;
-  align-items: center;
-}
-.card__heading img {
-  width: 30px;
-  margin-right: 1rem;
-}
-.card__heading h2 {
-  font-size: 30px;
-  margin-top: 0.5rem;
 }
 
 .card__name {
@@ -51,7 +157,7 @@ p {
   border-radius: 20px;
   width: 6rem;
   height: 2rem;
-  color: #2b80ff;
+  color: #2c80fe;
   font-size: 16px;
   text-align: center;
   vertical-align: middle;
@@ -122,9 +228,6 @@ p {
   margin-left: 2rem;
 }
 
-.card__skills_list {
-  background-color: green;
-}
 .card__skills_list h2 {
   font-size: 35px;
   margin: 1.3rem 0;
@@ -132,15 +235,6 @@ p {
 
 .card__skills_item {
   display: flex;
-}
-
-.card--traits {
-  margin: 3rem 0;
-}
-
-main {
-  margin: 0 auto;
-  width: 70%;
 }
 
 .status-bar {
@@ -179,36 +273,39 @@ header h3 {
 }
 
 .card {
-  flex: 1;
   position: relative;
   padding: 2rem;
   border-radius: 1rem;
   background-color: #fff;
-  box-shadow: 0px 8px 60px rgba(0, 0, 0, 0.1);
-}
-.card h2 {
-  color: #b8b9b8;
+  box-shadow: 0px 8px 35px rgba(0, 0, 0, 0.2);
 }
 
 .small--card {
-  min-height: 25rem;
+  flex: 1;
   width: 30rem;
   min-width: 500px;
 }
 
 .big--card {
   width: 100%;
-  min-height: 5rem;
+  margin: 2.5rem 0;
 }
-.big--card:after {
-  content: "";
-  position: absolute;
-  border-radius: 50%;
-  right: 1rem;
-  top: 1rem;
-  width: 15px;
-  height: 15px;
-  background-color: blue;
+
+.card__heading {
+  vertical-align: bottom;
+  margin-bottom: 2rem;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+.card__heading img {
+  width: 40px;
+  margin-right: 2rem;
+}
+.card__heading h1 {
+  font-size: 40px;
+  margin-top: 0.2rem;
+  color: #b8b9b8;
 }
 
 /*# sourceMappingURL=style.css.map */

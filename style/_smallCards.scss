@@ -7,27 +7,12 @@
   margin-right: 2rem;
 }
 
-.card__heading {
-  padding: 0;
-  position: relative;
-  display: flex;
-  align-items: center;
-  img {
-    width: 30px;
-    margin-right: 1rem;
-  }
-  h2 {
-    font-size: 30px;
-    margin-top: 0.5rem;
-  }
-}
-
 .card__name {
   margin-top: 1rem;
   display: flex;
   align-items: center;
   h1 {
-    color: $grayFont;
+    color: $darkGrayFont;
     font-size: 40px;
     font-weight: 500;
   }
@@ -40,7 +25,7 @@
     border-radius: 20px;
     width: 6rem;
     height: 2rem;
-    color: #2b80ff;
+    color: #2c80fe;
     font-size: 16px;
     text-align: center;
     vertical-align: middle;
@@ -70,7 +55,7 @@
   flex-direction: column;
   p {
     margin: 0.8rem 0;
-    color: $grayFont;
+    color: $darkGrayFont;
   }
   .info__email {
     &::before {
@@ -119,7 +104,7 @@
 }
 
 .card__skills_list {
-  background-color: green;
+  //   background-color: green;
   h2 {
     font-size: 35px;
     margin: 1.3rem 0;
