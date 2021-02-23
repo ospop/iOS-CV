@@ -93,6 +93,25 @@ span {
   }
 }
 
+.card--work {
+  .span--2 {
+    font-style: italic;
+    font-weight: 100;
+  }
+  h2 {
+    margin-bottom: 0.8rem;
+    font-weight: 500;
+    font-size: 30px;
+    color: #4c4c4c;
+  }
+  p {
+    font-weight: 200;
+    font-size: 22px;
+    margin-bottom: 1.5rem;
+    color: $darkGrayFont;
+  }
+}
+
 .show--less--btn {
   display: flex;
   flex-direction: column;
@@ -112,5 +131,52 @@ span {
   }
   &:hover {
     cursor: pointer;
+  }
+}
+
+.black__fill {
+  z-index: 1;
+  background-color: black;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  opacity: 0.1;
+  transition: opacity 0.3s;
+  &:hover {
+    opacity: 0;
+  }
+}
+
+.FEM__window {
+  position: relative;
+  height: 200px;
+  overflow: hidden;
+  margin-bottom: 3rem;
+  border-radius: 25px;
+  img {
+    margin: auto;
+    position: absolute;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    transition: all 0.3s;
+    filter: blur(4px);
+    -webkit-filter: blur(4px);
+  }
+  &:hover {
+    img {
+      width: 105%;
+      transform: translate(-2%, 0);
+      filter: blur(0px);
+      -webkit-filter: blur(0px);
+    }
+  }
+}
+
+a {
+  &:hover {
+    cursor: alias;
   }
 }
