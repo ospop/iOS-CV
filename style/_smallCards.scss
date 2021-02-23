@@ -8,28 +8,27 @@
 }
 
 .card__name {
-  margin-top: 1rem;
   display: flex;
   align-items: center;
   h1 {
     color: $darkGrayFont;
-    font-size: 40px;
+    font-size: 30px;
     font-weight: 500;
   }
 
   button {
-    margin: 0 2rem;
+    margin-left: 2rem;
     background-color: #dcdcdc;
     outline: none;
     border: none;
     border-radius: 20px;
-    width: 6rem;
-    height: 2rem;
+    width: 5rem;
+    height: 1.7rem;
     color: #2c80fe;
-    font-size: 16px;
+    font-size: 14px;
     text-align: center;
     vertical-align: middle;
-    line-height: 2rem;
+    line-height: 1.7rem;
     cursor: pointer;
     &:hover {
       background-color: #e9e9e9;
@@ -45,16 +44,26 @@
   margin-bottom: 1rem;
   h3 {
     font-weight: 300;
-    font-size: 25px;
+    font-size: 22px;
     color: #beb2a5;
   }
 }
 
 .card__info {
+  margin-top: 1rem;
   display: flex;
   flex-direction: column;
+  img {
+    width: 30px;
+    margin-right: 1rem;
+    opacity: 0.5;
+    &:hover {
+      opacity: 1;
+      cursor: alias;
+    }
+  }
   p {
-    margin: 0.8rem 0;
+    margin-bottom: 1rem;
     color: $darkGrayFont;
   }
   .info__email {
@@ -101,16 +110,51 @@
 
 .card--skills {
   margin-left: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .card__skills_list {
-  //   background-color: green;
   h2 {
-    font-size: 35px;
-    margin: 1.3rem 0;
+    color: $grayFont;
+    font-size: 28px;
+    font-weight: 500;
   }
 }
 
 .card__skills_item {
+  margin-bottom: 0.8rem;
+  vertical-align: middle;
+  align-items: center;
   display: flex;
+  height: 40px;
+  justify-content: space-between;
+}
+
+.rating {
+  margin-right: 2rem;
+  display: flex;
+  height: 30px;
+  h2 {
+    margin: 0 1rem;
+    font-weight: 500;
+  }
+  img {
+    align-self: center;
+    width: 20px;
+    margin: 0 0.2rem;
+  }
+}
+
+.see--more--btn {
+  margin: 1.8rem auto 0 auto;
+  display: flex;
+  h3 {
+    font-weight: 300;
+    color: $lightGrayFont;
+  }
+  &:hover {
+    cursor: pointer;
+  }
 }

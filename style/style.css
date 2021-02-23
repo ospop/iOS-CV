@@ -1,14 +1,23 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
 * {
   padding: 0;
   margin: 0;
-  font-family: "Meera Inimai", sans-serif;
+  font-family: "SF Display", arial;
   box-sizing: border-box;
+  color: #4c4c4c;
 }
 
 main {
+  position: relative;
   margin: 0 auto;
-  width: 70%;
+  width: 1200px;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  overflow: auto;
+}
+
+.main--content {
+  width: 90%;
 }
 
 p {
@@ -19,30 +28,37 @@ p {
   margin: 1.5rem auto;
   height: 2px;
   border-radius: 1px;
-  background-color: #4c4c4c;
-  opacity: 0.2;
+  background-color: #b8b9b8;
+  opacity: 0.1;
   width: 95%;
   justify-content: center;
+}
+
+span {
+  color: #beafa0;
 }
 
 .dots--button {
   position: absolute;
   border-radius: 50%;
   right: 0;
-  width: 20px;
-  height: 20px;
+  width: 25px;
+  height: 25px;
   background-color: #2c80fe;
 }
 .dots--button:hover {
   cursor: pointer;
+  background-color: #0d6eff;
 }
 .dots--button:before {
   content: "...";
   color: white;
-  font-size: 15px;
+  vertical-align: middle;
+  text-align: center;
+  font-size: 20px;
   position: absolute;
-  right: 0;
-  top: 0;
+  left: 50%;
+  top: 25%;
   transform: translate(-50%, -50%);
 }
 
@@ -59,8 +75,11 @@ p {
 .card__traits li {
   position: relative;
   color: #4c4c4c;
-  margin: 0.5rem 1.2rem;
+  margin: 0.5rem 2rem;
   font-size: 25px;
+}
+.card__traits li:hover {
+  cursor: help;
 }
 .card__traits li::before {
   content: "";
@@ -77,35 +96,33 @@ p {
 
 .card--education h2 {
   font-weight: 500;
-  font-size: 35px;
+  font-size: 30px;
   color: #4c4c4c;
 }
 .card--education h3 {
   color: #b9b9b9;
   font-weight: 300;
-  font-size: 30px;
+  font-size: 25px;
 }
 .card--education h4 {
   font-style: italic;
-  line-height: 55px;
+  line-height: 30px;
   font-weight: 500;
-  font-size: 30px;
+  font-size: 25px;
   color: #b9b9b9;
-}
-.card--education span {
-  color: #beafa0;
 }
 
 .card--experience h2 {
-  margin-bottom: 2rem;
+  margin-bottom: 0.8rem;
   font-weight: 500;
-  font-size: 35px;
+  font-size: 30px;
   color: #4c4c4c;
 }
 .card--experience p {
   font-weight: 200;
-  font-size: 26px;
+  font-size: 22px;
   margin-bottom: 1.5rem;
+  color: #4c4c4c;
 }
 
 .show--less--btn {
@@ -113,18 +130,18 @@ p {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin: 0 auto;
+  margin: 3rem auto 0 auto;
   width: 100px;
   height: 50px;
   border-radius: 20px;
 }
 .show--less--btn img {
   width: 20px;
-  margin-bottom: 0.5rem;
 }
 .show--less--btn h3 {
   color: #b9b9b9;
   font-size: 18px;
+  font-weight: 300;
 }
 .show--less--btn:hover {
   cursor: pointer;
@@ -140,28 +157,27 @@ p {
 }
 
 .card__name {
-  margin-top: 1rem;
   display: flex;
   align-items: center;
 }
 .card__name h1 {
   color: #4c4c4c;
-  font-size: 40px;
+  font-size: 30px;
   font-weight: 500;
 }
 .card__name button {
-  margin: 0 2rem;
+  margin-left: 2rem;
   background-color: #dcdcdc;
   outline: none;
   border: none;
   border-radius: 20px;
-  width: 6rem;
-  height: 2rem;
+  width: 5rem;
+  height: 1.7rem;
   color: #2c80fe;
-  font-size: 16px;
+  font-size: 14px;
   text-align: center;
   vertical-align: middle;
-  line-height: 2rem;
+  line-height: 1.7rem;
   cursor: pointer;
 }
 .card__name button:hover {
@@ -177,16 +193,26 @@ p {
 }
 .card__job h3 {
   font-weight: 300;
-  font-size: 25px;
+  font-size: 22px;
   color: #beb2a5;
 }
 
 .card__info {
+  margin-top: 1rem;
   display: flex;
   flex-direction: column;
 }
+.card__info img {
+  width: 30px;
+  margin-right: 1rem;
+  opacity: 0.5;
+}
+.card__info img:hover {
+  opacity: 1;
+  cursor: alias;
+}
 .card__info p {
-  margin: 0.8rem 0;
+  margin-bottom: 1rem;
   color: #4c4c4c;
 }
 .card__info .info__email::before {
@@ -226,43 +252,86 @@ p {
 
 .card--skills {
   margin-left: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .card__skills_list h2 {
-  font-size: 35px;
-  margin: 1.3rem 0;
+  color: #8e8e97;
+  font-size: 28px;
+  font-weight: 500;
 }
 
 .card__skills_item {
+  margin-bottom: 0.8rem;
+  vertical-align: middle;
+  align-items: center;
   display: flex;
+  height: 40px;
+  justify-content: space-between;
 }
 
-.status-bar {
-  padding-top: 5px;
+.rating {
+  margin-right: 2rem;
+  display: flex;
+  height: 30px;
+}
+.rating h2 {
+  margin: 0 1rem;
+  font-weight: 500;
+}
+.rating img {
+  align-self: center;
+  width: 20px;
+  margin: 0 0.2rem;
+}
+
+.see--more--btn {
+  margin: 1.8rem auto 0 auto;
+  display: flex;
+}
+.see--more--btn h3 {
+  font-weight: 300;
+  color: #b8b9b8;
+}
+.see--more--btn:hover {
+  cursor: pointer;
+}
+
+.status--bar {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  background-color: #fff;
   height: 25px;
   width: 100%;
 }
-.status-bar p {
+.status--bar p {
   text-align: center;
+  vertical-align: middle;
 }
 
 header {
-  height: 20rem;
   position: relative;
+  height: 20rem;
   display: flex;
   align-items: center;
   padding: 1rem;
 }
 header h1 {
+  font-weight: 500;
   font-size: 80px;
   margin: 0.5rem 0;
   letter-spacing: -2px;
+  color: black;
 }
 header h3 {
-  color: #9d9d9d;
   margin: 1rem 0;
   font-weight: 500;
   font-size: 30px;
+  color: #b8b9b8;
 }
 
 #profile-image {
@@ -278,33 +347,34 @@ header h3 {
   border-radius: 1rem;
   background-color: #fff;
   box-shadow: 0px 8px 35px rgba(0, 0, 0, 0.2);
+  margin-bottom: 4rem;
 }
 
 .small--card {
   flex: 1;
-  width: 30rem;
-  min-width: 500px;
+  min-width: 400px;
+  height: 400px;
 }
 
 .big--card {
   width: 100%;
-  margin: 2.5rem 0;
 }
 
 .card__heading {
   vertical-align: bottom;
-  margin-bottom: 2rem;
+  margin-bottom: 1.5rem;
   position: relative;
   display: flex;
   align-items: center;
 }
 .card__heading img {
-  width: 40px;
-  margin-right: 2rem;
+  width: 35px;
+  margin-right: 1.7rem;
 }
 .card__heading h1 {
+  font-weight: 500;
   font-size: 40px;
-  margin-top: 0.2rem;
+  margin-top: 0.4rem;
   color: #b8b9b8;
 }
 
