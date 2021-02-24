@@ -93,11 +93,11 @@ span {
   }
 }
 
+.folded {
+  height: 120px !important;
+}
+
 .card--work {
-  .span--2 {
-    font-style: italic;
-    font-weight: 100;
-  }
   h2 {
     margin-bottom: 0.8rem;
     font-weight: 500;
@@ -149,7 +149,7 @@ span {
   }
 }
 
-.FEM__window {
+.portal__window {
   position: relative;
   height: 200px;
   overflow: hidden;
@@ -173,6 +173,16 @@ span {
       -webkit-filter: blur(0px);
     }
   }
+}
+
+.music {
+  position: absolute;
+  top: -26rem;
+}
+
+.game {
+  position: absolute;
+  top: -5rem;
 }
 
 a {

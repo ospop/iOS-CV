@@ -125,10 +125,10 @@ span {
   color: #4c4c4c;
 }
 
-.card--work .span--2 {
-  font-style: italic;
-  font-weight: 100;
+.folded {
+  height: 120px !important;
 }
+
 .card--work h2 {
   margin-bottom: 0.8rem;
   font-weight: 500;
@@ -179,14 +179,14 @@ span {
   opacity: 0;
 }
 
-.FEM__window {
+.portal__window {
   position: relative;
   height: 200px;
   overflow: hidden;
   margin-bottom: 3rem;
   border-radius: 25px;
 }
-.FEM__window img {
+.portal__window img {
   margin: auto;
   position: absolute;
   display: flex;
@@ -196,11 +196,21 @@ span {
   filter: blur(4px);
   -webkit-filter: blur(4px);
 }
-.FEM__window:hover img {
+.portal__window:hover img {
   width: 105%;
   transform: translate(-2%, 0);
   filter: blur(0px);
   -webkit-filter: blur(0px);
+}
+
+.music {
+  position: absolute;
+  top: -26rem;
+}
+
+.game {
+  position: absolute;
+  top: -5rem;
 }
 
 a:hover {
@@ -213,6 +223,7 @@ a:hover {
 }
 
 .card--identity {
+  max-width: 500px;
   margin-right: 2rem;
 }
 
@@ -310,17 +321,59 @@ a:hover {
   content: "";
 }
 
-.card--skills {
+.stacks {
+  position: relative;
   margin-left: 2rem;
+  min-width: 500px;
+  /*not sure what's going on here*/
+  display: flex;
+  justify-content: center;
+}
+
+.card--skills {
+  z-index: 1;
+  position: absolute;
+  width: 100%;
+  top: 0;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  transition: all 1s;
+}
+
+.card--skills-2 {
+  width: 100%;
+  z-index: 1;
+  position: absolute;
+  top: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  transition: all 1s;
+}
+
+.card--hidden {
+  top: 1rem;
+  width: 98%;
+  z-index: -1;
+  pointer-events: none;
+  transition: all 0.5s;
+}
+.card--hidden img {
+  opacity: 0 !important;
+}
+.card--hidden h2 {
+  opacity: 0 !important;
+}
+.card--hidden h1 {
+  opacity: 0 !important;
 }
 
 .card__skills_list h2 {
   color: #8e8e97;
   font-size: 28px;
   font-weight: 500;
+  transition: opacity 0.5s;
 }
 
 .card__skills_item {
@@ -330,6 +383,10 @@ a:hover {
   display: flex;
   height: 40px;
   justify-content: space-between;
+  transition: opacity 0.5s;
+}
+.card__skills_item h2 {
+  opacity: 1;
 }
 
 .rating {
@@ -340,14 +397,19 @@ a:hover {
 .rating h2 {
   margin: 0 1rem;
   font-weight: 500;
+  opacity: 1;
+  transition: opacity 0.5s;
 }
 .rating img {
   align-self: center;
   width: 20px;
   margin: 0 0.2rem;
+  opacity: 1;
+  transition: opacity 0.5s;
 }
 
 .see--more--btn {
+  user-select: none;
   margin: 1.8rem auto 0 auto;
   display: flex;
 }
@@ -363,8 +425,9 @@ a:hover {
   position: -webkit-sticky;
   position: sticky;
   top: 0;
-  z-index: 1;
+  z-index: 2;
   background-color: #fff;
+  opacity: 0.8;
   height: 25px;
   width: 100%;
 }
@@ -402,7 +465,6 @@ header h3 {
 }
 
 .card {
-  position: relative;
   padding: 2rem;
   border-radius: 1rem;
   background-color: #fff;
@@ -430,12 +492,16 @@ header h3 {
 .card__heading img {
   width: 35px;
   margin-right: 1.7rem;
+  opacity: 1;
+  transition: opacity 0.5s;
 }
 .card__heading h1 {
   font-weight: 500;
   font-size: 40px;
   margin-top: 0.4rem;
   color: #b8b9b8;
+  opacity: 1;
+  transition: opacity 0.5s;
 }
 
 /*# sourceMappingURL=style.css.map */

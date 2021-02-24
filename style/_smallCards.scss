@@ -4,6 +4,7 @@
 }
 
 .card--identity {
+  max-width: 500px;
   margin-right: 2rem;
 }
 
@@ -62,10 +63,12 @@
       cursor: pointer;
     }
   }
+
   p {
     margin-bottom: 1rem;
     color: $darkGrayFont;
   }
+
   .info__email {
     &::before {
       align-items: center;
@@ -79,6 +82,7 @@
       content: '';
     }
   }
+
   .info__phone {
     &::before {
       align-items: center;
@@ -108,11 +112,51 @@
   }
 }
 
-.card--skills {
+.stacks {
+  position: relative;
   margin-left: 2rem;
+  min-width: 500px; /*not sure what's going on here*/
+  display: flex;
+  justify-content: center;
+}
+
+.card--skills {
+  z-index: 1;
+  position: absolute;
+  width: 100%;
+  top: 0;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  transition: all 1s;
+}
+
+.card--skills-2 {
+  width: 100%;
+  z-index: 1;
+  position: absolute;
+  top: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  transition: all 1s;
+}
+
+.card--hidden {
+  top: 1rem;
+  width: 98%;
+  z-index: -1;
+  pointer-events: none;
+  transition: all 0.5s;
+  img {
+    opacity: 0 !important;
+  }
+  h2 {
+    opacity: 0 !important;
+  }
+  h1 {
+    opacity: 0 !important;
+  }
 }
 
 .card__skills_list {
@@ -120,6 +164,7 @@
     color: $grayFont;
     font-size: 28px;
     font-weight: 500;
+    transition: opacity 0.5s;
   }
 }
 
@@ -130,6 +175,10 @@
   display: flex;
   height: 40px;
   justify-content: space-between;
+  transition: opacity 0.5s;
+  h2 {
+    opacity: 1;
+  }
 }
 
 .rating {
@@ -139,15 +188,20 @@
   h2 {
     margin: 0 1rem;
     font-weight: 500;
+    opacity: 1;
+    transition: opacity 0.5s;
   }
   img {
     align-self: center;
     width: 20px;
     margin: 0 0.2rem;
+    opacity: 1;
+    transition: opacity 0.5s;
   }
 }
 
 .see--more--btn {
+  user-select: none;
   margin: 1.8rem auto 0 auto;
   display: flex;
   h3 {
