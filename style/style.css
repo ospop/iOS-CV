@@ -6,8 +6,13 @@
   color: #4c4c4c;
 }
 
+body {
+  display: flex;
+  justify-content: center;
+}
+
 main {
-  position: relative;
+  position: absolute;
   margin: 0 auto;
   width: 1200px;
   height: auto;
@@ -129,6 +134,13 @@ span {
   height: 120px !important;
 }
 
+.done h1 {
+  margin: 5rem auto;
+  text-align: center;
+  font-weight: 100;
+  color: #b8b9b8;
+}
+
 .card--work h2 {
   margin-bottom: 0.8rem;
   font-weight: 500;
@@ -138,7 +150,8 @@ span {
 .card--work p {
   font-weight: 200;
   font-size: 22px;
-  margin-bottom: 1.5rem;
+  margin-bottom: 2rem;
+  margin-top: -2rem;
   color: #4c4c4c;
 }
 

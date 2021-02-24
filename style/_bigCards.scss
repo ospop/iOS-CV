@@ -96,7 +96,14 @@ span {
 .folded {
   height: 120px !important;
 }
-
+.done {
+  h1 {
+    margin: 5rem auto;
+    text-align: center;
+    font-weight: 100;
+    color: $lightGrayFont;
+  }
+}
 .card--work {
   h2 {
     margin-bottom: 0.8rem;
@@ -107,7 +114,8 @@ span {
   p {
     font-weight: 200;
     font-size: 22px;
-    margin-bottom: 1.5rem;
+    margin-bottom: 2rem;
+    margin-top: -2rem;
     color: $darkGrayFont;
   }
 }
