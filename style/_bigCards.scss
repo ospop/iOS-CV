@@ -28,6 +28,10 @@ span {
 
 .card__traits {
   min-height: 2rem;
+  p {
+    font-weight: 200;
+    font-size: 22px;
+  }
   ul {
     list-style: none;
     display: flex;
@@ -40,9 +44,7 @@ span {
     color: $darkGrayFont;
     margin: 0.5rem 2rem;
     font-size: 25px;
-    &:hover {
-      cursor: help;
-    }
+
     &::before {
       content: '';
       align-items: center;

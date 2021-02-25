@@ -70,6 +70,10 @@ span {
 .card__traits {
   min-height: 2rem;
 }
+.card__traits p {
+  font-weight: 200;
+  font-size: 22px;
+}
 .card__traits ul {
   list-style: none;
   display: flex;
@@ -82,9 +86,6 @@ span {
   color: #4c4c4c;
   margin: 0.5rem 2rem;
   font-size: 25px;
-}
-.card__traits li:hover {
-  cursor: help;
 }
 .card__traits li::before {
   content: "";
@@ -250,7 +251,7 @@ a:hover {
   outline: none;
   border: none;
   border-radius: 20px;
-  width: 5rem;
+  width: 7rem;
   height: 1.7rem;
   color: white;
   font-size: 14px;
