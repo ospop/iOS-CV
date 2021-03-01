@@ -48,7 +48,7 @@ header {
 }
 
 .card {
-  padding: 2rem;
+  padding: 3rem 2rem;
   border-radius: 1rem;
   background-color: $background;
   box-shadow: 0px 8px 35px rgba(0, 0, 0, 0.1);
@@ -57,8 +57,6 @@ header {
 
 .small--card {
   flex: 1;
-  min-width: 400px;
-  height: 400px;
 }
 
 .big--card {

@@ -1,4 +1,5 @@
 .identity-skills {
+  position: relative;
   display: flex;
   justify-content: space-between;
 }
@@ -113,22 +114,24 @@
 }
 
 .card--identity {
+  padding: 0.5rem;
   margin-right: 2rem;
+  max-width: 450px;
 }
 
 .stacks {
   flex: 1.5;
   position: relative;
   margin-left: 2rem;
-  min-width: 500px; /*not sure what's going on here*/
+  min-width: 300px; /*not sure what's going on here*/
   display: flex;
   justify-content: center;
 }
 
 .card--skills {
+  width: 100%;
   z-index: 1;
   position: absolute;
-  width: 100%;
   top: 0;
   display: flex;
   flex-direction: column;
